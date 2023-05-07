@@ -26,3 +26,18 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/post/:id', async (req, res) => {
+  try {
+    const matchPost = await Post.findAll({
+      where: {
+        id: req.params.id,
+      }
+    });
+
+    res.status(200).json(matchPost);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
+
