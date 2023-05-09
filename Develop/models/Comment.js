@@ -33,9 +33,13 @@ Comment.init(
                 key: 'id',
             },
         },
-    }
+    },
     {
-
+        sequelize,
+        timestamps: false,
+        freezeTableName,
+        underscored: true,
+        modelName: 'comment',
     }
 );
 
