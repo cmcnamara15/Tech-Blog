@@ -1,4 +1,4 @@
-const Sequalize = require('sequalize');
+const Sequelize = require('sequalize');
 require('dotenv').config();
 
 let sequelize;
