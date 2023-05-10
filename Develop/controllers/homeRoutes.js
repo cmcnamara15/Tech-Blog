@@ -12,3 +12,11 @@ router.get('/signup', (req, res) => {
     res.render("signup")
 });
 
+router.get('/userpage', (req, res) => {
+    res.render("userPage")
+});
+
+router.get('/logout', (req, res) => {
+    res.render("logout")
+});
+
