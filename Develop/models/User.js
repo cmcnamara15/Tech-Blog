@@ -42,7 +42,13 @@ User.init(
                 console.log('working')
                 newUserData.password = await bcrypt.hash(updateUserData.password, 10);
                 return newUserData;
-            }
-        }
+            },
+            beforeUpdate: async (updatedUserData) => {
+                updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+                return updatedUserData;
+            },
+        },
     }
-)
+);
+
+module.exports = User;
