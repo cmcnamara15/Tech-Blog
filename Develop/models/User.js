@@ -29,7 +29,11 @@ User.init(
             },
         },
         password: {
-            type: DataTypes.S
-        }
-    }
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                len: [8],
+            },
+        },
+    },
 )
