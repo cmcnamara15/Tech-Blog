@@ -1,23 +1,33 @@
 const router = require('express').Router();
 
 router.get('/', (req, res) => {
-    res.render("home")
+    res.render("home", {
+        logged_in: req.session.logged_in
+    })
 });
 
 router.get('/login', (req, res) => {
-    res.render("login")
+    res.render("login", {
+        logged_in: req.session.logged_in
+    })
 });
 
 router.get('/signup', (req, res) => {
-    res.render("signup")
+    res.render("signup", {
+        logged_in: req.session.logged_in
+    })
 });
 
 router.get('/userpage', (req, res) => {
-    res.render("userPage")
+    res.render("userPage", {
+        logged_in: req.session.logged_in
+    })
 });
 
 router.get('/logout', (req, res) => {
-    res.render("logout")
+    res.render("logout", {
+        logged_in: req.session.logged_in
+    })
 });
 
 module.exports = router;
