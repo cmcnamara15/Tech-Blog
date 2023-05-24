@@ -64,23 +64,28 @@ router.delete('/:id', async (req, res) => {
 // Update
 router.put('/:id', async (req, res) => {
   try {
-    const postData = await Post.update({
-      where: {
-        id: req.params.id,
-        user_id: req.session.user_id,
+    const postData = await Post.update(
+      {
+        title: req.body.title,
+        content: req.body.content,
       },
-    });
+      {
+        where: {
+          id: req.params.id,
+          user_id: req.session.user_id,
+        }
+      });
 
-    if(!postData) {
-      res.status(404).json({message: 'No project found with this id'});
-      return;
+      if (!postData) {
+        res.status(404).json({ message: 'No project found with this id!' });
+        return;
+      }
+
+      res.status(200).json(postData);
+    } catch (err) {
+      res.status(500).json(err);
     }
-
-    res.status(200).json(postData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+  });
 
 
 module.exports = router;
