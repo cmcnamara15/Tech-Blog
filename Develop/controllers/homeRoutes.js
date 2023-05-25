@@ -19,7 +19,7 @@ router.get('/signup', (req, res) => {
     })
 });
 
-router.get('/userpage', (req, res) => {
+router.get('/userPage', (req, res) => {
     res.render("userPage", {
         logged_in: req.session.logged_in
     })
