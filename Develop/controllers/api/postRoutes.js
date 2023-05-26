@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Post } = require('../../models');
+const { Post } = require('../../models ');
 
 router.post('/', async (req, res) => {
   try {
@@ -14,13 +14,14 @@ router.post('/', async (req, res) => {
   }
 });
 
+
 router.get('/', async (req, res) => {
   try {
-    const existingPosts = await Post.findall({
+    const existingPosts = await Post.findAll({
       attributes: ['title', 'date']
     });
     console.log('called')
-    res.status(200).json(existingPosts)
+    res.status(200).json(existingPosts);
   } catch (err) {
     res.status(400).json(err);
   }
@@ -50,8 +51,8 @@ router.delete('/:id', async (req, res) => {
       },
     });
 
-    if(!postData) {
-      res.status(404).json({message: 'No project found with this id'});
+    if (!postData) {
+      res.status(404).json({ message: 'No project found with this id!' });
       return;
     }
 
@@ -61,7 +62,8 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
-// Update
+
+// update
 router.put('/:id', async (req, res) => {
   try {
     const postData = await Post.update(
@@ -70,22 +72,21 @@ router.put('/:id', async (req, res) => {
         content: req.body.content,
       },
       {
-        where: {
-          id: req.params.id,
-          user_id: req.session.user_id,
-        }
-      });
+      where: {
+        id: req.params.id,
+        user_id: req.session.user_id,
+      },
+    });
 
-      if (!postData) {
-        res.status(404).json({ message: 'No project found with this id!' });
-        return;
-      }
-
-      res.status(200).json(postData);
-    } catch (err) {
-      res.status(500).json(err);
+    if (!postData) {
+      res.status(404).json({ message: 'No project found with this id!' });
+      return;
     }
-  });
 
+    res.status(200).json(postData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 module.exports = router;
