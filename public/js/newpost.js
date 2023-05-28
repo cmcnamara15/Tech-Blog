@@ -1,19 +1,19 @@
 async function newPostHandler(event) {
     event.preventDefault();
+    console.log("clicked")
 
-    const title = document.querySelector('#titleInput').value.trim();
-    const post_body = document.querySelector('#bodyInput').value.trim();
-    let is_public = document.querySelector('#isPublic');
-    let allow_comments = document.querySelector('#allowComments');
+    const title = document.querySelector('#title').value.trim();
+    const post_body = document.querySelector('#content').value.trim();
+    console.log(title)
+    console.log(post_body)
+    
 
     if (title && post_body) {
-        const response = await fetch(`/api/blog`, {
+        const response = await fetch(`/api/userPage`, {
             method: 'POST',
             body: JSON.stringify({
                 title,
                 post_body,
-                is_public: is_public.checked,
-                allow_comments: allow_comments.checked
             }),
             headers: {
                 'Content-Type': 'application/json',
@@ -28,4 +28,4 @@ async function newPostHandler(event) {
     }
 };
 
-document.querySelector('.createBlogPost').addEventListener('submit', newPostHandler);
+document.querySelector('.newPost').addEventListener('submit', newPostHandler);
