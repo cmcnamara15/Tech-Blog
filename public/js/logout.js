@@ -16,3 +16,5 @@ function handleSubmit(event){
 }
 
 logoutLink.addEventListener("click", handleSubmit)
+
+
