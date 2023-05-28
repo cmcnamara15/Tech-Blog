@@ -3,17 +3,17 @@ async function newPostHandler(event) {
     console.log("clicked")
 
     const title = document.querySelector('#title').value.trim();
-    const post_body = document.querySelector('#content').value.trim();
+    const content = document.querySelector('#content').value.trim();
     console.log(title)
-    console.log(post_body)
+    console.log(content)
     
 
-    if (title && post_body) {
+    if (title && content) {
         const response = await fetch(`/api/userPage`, {
             method: 'POST',
             body: JSON.stringify({
                 title,
-                post_body,
+                content,
             }),
             headers: {
                 'Content-Type': 'application/json',
