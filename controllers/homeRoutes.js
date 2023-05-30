@@ -29,6 +29,12 @@ router.get('/userPage', (req, res) => {
     
 }) 
 
+router.get('/blogPost', (req, res) => {
+    res.render("blogPost", {
+        logged_in: req.session.logged_in
+    })
+})
+
 router.get('/logout', (req, res) => {
     res.render("logout", {
         logged_in: req.session.logged_in
