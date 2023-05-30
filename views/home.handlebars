@@ -4,11 +4,11 @@
   </div>
 </div>
 <div class="container-fluid" style="text-align: center;"> 
-    <div class="col-md-6 project-list">
     <h3>Current Projects:</h3>
-        <ul>
+        <ul style="list-style-type: none;">
             {{#each posts as |post|}}
-            <li>{{post.title}}</li>
+            <li><a href="/views/logout.handlebars">{{post.title}}</a></li>
+            <li>{{post.date_created}}</li>
             <li>{{post.content}}</li>
             {{/each}}
         </ul>

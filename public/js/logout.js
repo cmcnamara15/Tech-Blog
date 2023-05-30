@@ -2,6 +2,7 @@ const logoutLink = document.querySelector("#logout")
 
 function handleSubmit(event){
     event.preventDefault()
+    console.log("clicked me")
 
     fetch("/api/users/logout", {
         method: "POST",
