@@ -22,11 +22,25 @@ router.get('/signup', (req, res) => {
     })
 }) 
 
-router.get('/userPage', (req, res) => {
+router.get('/userPage', async (req, res) => {
+    try { 
+        const userData = await User.findByPk(req.session.user_id, {
+            include: [
+                {
+                    model: Post,
+                }
+            ]
+        })
+    const user = userData.get({plain:true})
+    console.log(user)
     res.render("userPage", {
+        user:user,
         logged_in: req.session.logged_in
     })
-    
+    } catch(err){
+        console.log(err)
+        res.status(500).json(err);
+    }
 }) 
 
 router.get('/blogPost/:id', async (req, res) => {
