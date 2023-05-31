@@ -1,4 +1,5 @@
 function handleSubmit(event){
+    console.log('clicked')
     event.preventDefault()
     const content = document.querySelector("#comment").value
     const url = location.href
@@ -22,5 +23,5 @@ function handleSubmit(event){
     })
 }
 
-const comment = document.querySelector("#submit-comment")
-loginForm.addEventListener("submit", handleSubmit)
+const comment = document.querySelector("#comment-form")
+comment.addEventListener("submit", handleSubmit)
