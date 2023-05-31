@@ -7,10 +7,26 @@
     <h3>Current Projects:</h3>
         <ul style="list-style-type: none;">
             {{#each posts as |post|}}
-            <li><a href="/blogPost/{{post.id}}">{{post.title}}</a></li>
+            <div class="card text-center" style="margin-bottom: 30px">
+              <div class="card-header" style="background-color:azure">
+                Fresh Post!
+              </div>
+              <div class="card-body" style="background-color: beige;">
+                <h5 class="card-title"><li><a href="/blogPost/{{post.id}}">{{post.title}}</a></li></h5>
+                <p class="card-text">{{post.content}}</p>
+
+              </div>
+              <div class="card-footer text-muted" style="background-color: azure;">
+                <li>{{post.date_created}}</li>
+              </div>
+              </div>
+            {{!-- <li><a href="/blogPost/{{post.id}}">{{post.title}}</a></li>
             <li>{{post.date_created}}</li>
-            <li>{{post.content}}</li>
+            <li>{{post.content}}</li> --}}
+              {{!-- {{> post-card}} --}}
+              <li></li>
+              <li></li>
+              <li></li>
             {{/each}}
         </ul>
 </div>
-
