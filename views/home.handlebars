@@ -8,15 +8,15 @@
         <ul style="list-style-type: none;">
             {{#each posts as |post|}}
             <div class="card text-center" style="margin-bottom: 30px; margin-right:20%; margin-left:20%">
-              <div class="card-header" style="background-color:rgb(94, 238, 238)">
+              <div class="card-header" style="background-color:rgb(255, 200, 123)">
                 Fresh Post!
               </div>
-              <div class="card-body" style="background-color: rgb(247, 247, 152);">
+              <div class="card-body" style="background-color: rgb(255, 255, 255);">
                 <h5 class="card-title"><li><a href="/blogPost/{{post.id}}">{{post.title}}</a></li></h5>
                 <p class="card-text">{{post.content}}</p>
 
               </div>
-              <div class="card-footer text-muted" style="background-color: rgb(182, 249, 249);">
+              <div class="card-footer text-muted" style="background-color: rgb(202, 201, 249);">
                 <li>{{post.date_created}}</li>
               </div>
               </div>

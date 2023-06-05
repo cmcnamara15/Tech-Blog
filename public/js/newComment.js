@@ -5,7 +5,7 @@ function handleSubmit(event){
     const url = location.href
     const urlArray = url.split('/')
     const post_id = urlArray[urlArray.length -1]
-    fetch("/api/comments", {
+    fetch("/api/comment", {
         method: "POST",
         body: JSON.stringify({ content, post_id }),
         headers: {
