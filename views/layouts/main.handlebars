@@ -26,18 +26,6 @@
         </a>
     </div>
     </nav>
-    {{!-- <nav>
-        <uL>
-        <a href="/"><li>Home</li></a>
-            {{#if logged_in}}
-            <a href="/userPage"><li>User Page</li></a>
-            <a href="#" id="logout"><li>logout</li></a>
-            {{else}}
-            <a href="/login"><li>Login</li></a>
-            <a href="/signup"><li>Signup</li></a>
-            {{/if}}
-        </uL>
-    </nav> --}}
     {{{body}}}
     {{#if logged_in}}
         <script src="/js/logout.js"></script>
