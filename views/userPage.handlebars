@@ -1,7 +1,7 @@
 <div class="row">
     <div class="text-center mx-auto pt-2">
         <h1>{{user.userName}}'s Blog</h1>
-    </div>
+    {{!-- </div>
         <h3>Current Projects:</h3>
         <ul style="list-style-type: none;">
             {{#each user.posts as |post|}}
@@ -10,7 +10,29 @@
             <li>{{post.content}}</li>
             {{/each}}
         </ul>
+</div> --}}
+<div class="container-fluid" style="text-align: center;"> 
+    <h3>Current Projects:</h3>
+        <ul style="list-style-type: none;">
+            {{#each user.posts as |post|}}
+            <div class="card text-center" style="margin-bottom: 30px; margin-right:20%; margin-left:20%">
+              <div class="card-header" style="background-color:rgb(102, 255, 224)">
+                Fresh Post!
+              </div>
+              <div class="card-body" style="background-color: rgb(208, 248, 247);">
+                <h5 class="card-title"><li><a href="/blogPost/{{post.id}}">{{post.title}}</a></li></h5>
+                <p class="card-text">{{post.date_created}}</p>
+				<p class="card-text">{{post.content}}</p>
+
+              </div>
+              <div class="card-footer text-muted" style="background-color: rgb(202, 201, 249);">
+                <li>This post was written by{{user.userName}}</li>
+              </div>
+              </div>
+            {{/each}}
+        </ul>
 </div>
+
 </div>
 
 			<form id="new-post" class="newPost">
