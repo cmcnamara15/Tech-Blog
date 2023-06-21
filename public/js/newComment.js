@@ -26,11 +26,7 @@ async function handleSubmit(event){
             alert(response.statusText);
         }
     }
-    
-    
-    
-    
-    // fetch("/api/comment/", {
+     // fetch("/api/comment/", {
     //     method: "POST",
     //     body: JSON.stringify({ content, post_id }),
     //     headers: {
