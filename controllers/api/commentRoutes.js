@@ -15,6 +15,34 @@ router.post('/', async (req, res) => {
     }
     });
 
+router.get('/', async (req, res) => {
+    try {
+        const existingComments = await Comment.findAll({
+        attributes: ['content', 'user_id', 'date_created']
+        });
+        console.log('called')
+        res.status(200).json(existingComments);
+    } catch (err) {
+        res.status(400).json(err);
+    }
+    });
+
+
+router.get('/comment/:id', async (req, res) => {
+    try {
+        const matchComment = await Comment.findAll({
+        where: {
+            id: req.params.id,
+        }
+        });
+
+        res.status(200).json(matchComment);
+    } catch (err) {
+        res.status(400).json(err);
+    }
+    });
+
+
 router.delete('/:id', async (req, res) => {
     try {
         const commentData = await Comment.destroy({

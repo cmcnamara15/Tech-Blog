@@ -9,7 +9,7 @@ async function handleSubmit(event){
         console.log(post_id)
     
     if (content) {
-        const response = await fetch(`/api/comment`, {
+        const response = await fetch(`/api/comments`, {
             method: 'POST',
             body: JSON.stringify({
                 content,
@@ -21,28 +21,14 @@ async function handleSubmit(event){
         });
     
         if (response.ok) {
-            document.location.replace('/comment');
+            document.location.replace(`/blogPost/${post_id}`);
         } else {
             alert(response.statusText);
         }
     }
-     // fetch("/api/comment/", {
-    //     method: "POST",
-    //     body: JSON.stringify({ content, post_id }),
-    //     headers: {
-    //         "Content-Type": "application/json"
-    //     }
-    // }) 
-    // .then(res => res.json())
-    // .then(data => {
-    //     console.log(data)
-    //     if(data.message === "You are now logged in!") {
-    //         window.location.href="/userPage"
-    //     } else {
-    //         window.alert("login error")
-    //     }
-    // })
 }
+
+
 
 const comment = document.querySelector("#comment-form")
 comment.addEventListener("submit", handleSubmit)
