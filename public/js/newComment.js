@@ -22,7 +22,7 @@ async function handleSubmit(event){
     
         if (response.ok) {
             // event.preventDefault()
-            // document.location.replace(`/blogPost/${post_id}`);
+            document.location.replace(`/blogPost/${post_id}`);
         } else {
             alert(response.statusText);
         }
