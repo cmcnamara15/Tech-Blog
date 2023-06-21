@@ -5,9 +5,11 @@ router.post('/', async (req, res) => {
     console.log('working')
     try {
         const newPost = await Comment.create({
-        ...req.body,
-        user_id: req.session.user_id,
+            content: req.body.content,
+            post_id: req.body.post_id,
+            user_id: req.session.user_id || req.body.user_id,
         });
+        console.log(newPost)
         
         res.status(200).json(newPost);
     } catch (err) {
