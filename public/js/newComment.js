@@ -21,7 +21,8 @@ async function handleSubmit(event){
         });
     
         if (response.ok) {
-            document.location.replace(`/blogPost/${post_id}`);
+            // event.preventDefault()
+            // document.location.replace(`/blogPost/${post_id}`);
         } else {
             alert(response.statusText);
         }
