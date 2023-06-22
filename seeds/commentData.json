@@ -1,0 +1,22 @@
+[
+    {
+        "content": "Billy Joel is the best! Vienna might be my favorite song of all time.",
+        "user_id": 3,
+        "post_id": 4
+    },
+    {
+        "content": "I love Billy Joel! I've seen him in concert 6 times.",
+        "user_id": 6,
+        "post_id": 4
+    },
+    {
+        "content": "Growing up in Oyster Bay you can't help but love Billy Joel.",
+        "user_id": 1,
+        "post_id": 4
+    },
+    {
+        "content": "I love this idea, the world needs more music apps!",
+        "user_id": 2,
+        "post_id": 1
+    }
+]

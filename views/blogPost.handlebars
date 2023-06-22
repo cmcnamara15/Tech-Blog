@@ -23,7 +23,7 @@
                 <h3>Comments</h3>
                 {{#each comments as |comment| }}
                     <div>
-                        <p>{{comment.content}} by {{comment.user.name}} on {{comment.date_created}}</p>
+                        <p>{{comment.content}} by {{user.userName}} on {{comment.date_created}}</p>
                     </div>
                 {{/each}}
             </div>
