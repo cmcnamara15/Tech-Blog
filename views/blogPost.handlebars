@@ -1,26 +1,19 @@
-<h2>{{title}}</h2>
+{{!-- <h2>{{title}}</h2>
 <p>{{user.userName}}</p>
 <p>{{date_created}}</p>
 <p>{{content}}</p>
-<p>{{comment.content}}</p>
+<p>{{comment.content}}</p> --}}
 
-
-{{!-- <div class="container-fluid" > 
-    <h5>Comments:</h5>
-        <ul style="list-style-type: none;">
-            {{#each comments as |comment|}}
-            <div class="card text-center" style="margin-bottom: 30px; margin-right:20%; margin-left:20%">
-              <div class="card-header" style="background-color:rgb(255, 168, 102)">
-                Fresh Post!
-              </div>
-              <div class="card-body" style="background-color: rgb(208, 248, 247);">
-                <h5 class="card-title"><li><a href="/blogPost/{{comment.content}}">{{comment.date_created}}</a></li></h5>
-                <p class="card-text">{{comment.content}}</p>
-        </ul>
+<div class="container-fluid">
+    <h2>{{title}}</h2>
+    <p>{{user.userName}}</p>
+    <p>{{date_created}}</p>
+    <p>{{content}}</p>
+    <p>{{comment.content}}</p>
 </div>
- {{/each}} --}}
+
              <div class="text-center">
-                <h3>Comments</h3>
+                <h3>Comments!!!</h3>
                 {{#each comments as |comment| }}
                     <div>
                         <p>{{comment.content}} by {{user.userName}} on {{comment.date_created}}</p>
