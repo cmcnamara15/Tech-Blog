@@ -10,17 +10,18 @@
 </head>
 <body>
     <nav class="navbar navbar-light" style="background-color: rgb(0, 255, 200)">
-    <a class="navbar-brand" href="/">Chris Mac's Tech Space</a>
+    {{!-- <a class="navbar-brand" href="/" style="padding-left: 3%">Chris Mac's Tech Space</a> --}}
     <div class="container">
-        <a class="navbar-brand" href="#">
+        {{!-- <a class="navbar-brand" href="#"> --}}
             
-            <a href="/"><li>Home</li></a>
+            <a class="navbar-brand" href="/"><li style="list-style-type: none;">Chris Mac's Tech Space</li></a>
+            <a href="/"><li style="font-family: cursive; font-weight: bolder; font-size:larger; list-style-type: none;">Home</li></a>
                 {{#if logged_in}}
-                <a href="/userPage"><li>User Page</li></a>
-                <a href="#" id="logout"><li>logout</li></a>
+                <a href="/userPage"><li style="font-family: cursive; font-weight: bolder; font-size:larger; list-style-type: none">User Page</li></a>
+                <a href="#" id="logout"><li style="font-family: cursive; font-weight: bolder; font-size:larger">logout</li></a>
                 {{else}}
-                <a href="/login"><li>Login</li></a>
-                <a href="/signup"><li>Signup</li></a>
+                <a href="/login"><li style="font-family: cursive; font-weight: bolder; font-size:larger; list-style-type: none;">Login</li></a>
+                <a href="/signup"><li style="font-family: cursive; font-weight: bolder; font-size:larger">Signup</li></a>
                 {{/if}}
             
         </a>
