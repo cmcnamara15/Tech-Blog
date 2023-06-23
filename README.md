@@ -29,8 +29,8 @@ This Project was a great exercise in executing a full stack application from sta
 - [Screenshots](#screenshots)
 
 
-## Demo Video 
-[Demo Video]()<br />
+## Link for Deployed Application via Heroku
+[Deployed App](https://chris-macs-techblog-290512fcf235.herokuapp.com/)<br />
 
 ## REPO URL
 [Repository URL](https://github.com/cmcnamara15/Tech-Blog)<br />
@@ -56,9 +56,9 @@ If you have any questions please feel free to reach out.<br />
 Github: [cmcnamara15](https://github.com/cmcnamara15)<br />
 Email: cmcnamara1991@icloud.com
 
-## Screenshots
+<!-- ## Screenshots
 
-The following screenshots shows the apps functionality.<br />
+The following screenshots shows the apps functionality.<br /> -->
 
 
 <!-- ## Node in terminal<br />
