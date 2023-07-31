@@ -61,19 +61,17 @@ Email: cmcnamara1991@icloud.com
 The following screenshots shows the apps functionality.<br /> -->
 
 
-<!-- ## Node in terminal<br />
+## Screenshots <br />
 
-![Screenshot of the program running in the terminal](./assets/screenshot1.png)
+![Screenshot of the program running in the terminal](./public/images/hom.png)
 
-## Generated output file<br />
+## Login Page<br />
 
-![Screenshot of output example](./assets/screenshot2.png)
+![Screenshot of output example](./public/images/login.png)
 
-## Failed Test result<br />
+## User Post Page <br />
 
-![Example of failed test](./assets/failedtest.png)
+![Example of failed test](./public/images/userPost.png)
 
-## Inquirer prompts complete<br />
 
-![Example of passed test](./assets/passedtest.png) -->
 
